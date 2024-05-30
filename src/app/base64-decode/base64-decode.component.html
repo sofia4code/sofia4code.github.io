@@ -1,0 +1,29 @@
+<div>
+    <h1>Base64 Decode</h1>
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Text to Decode</mat-label>
+        <input
+          matInput
+          formControlName="myinput"
+        />
+      </mat-form-field>
+      <span *ngIf="!form.untouched && !form.value.myinput.length">
+        Enter text to Decode</span
+      >
+    </form>
+  </div>
+  <mat-form-field>
+    <mat-label>Decoded Value</mat-label>
+    <textarea matInput [value]="submit()"></textarea>
+  </mat-form-field>
+  <button
+    mat-icon-button
+    color="primary"
+    [cdkCopyToClipboard]="submit()"
+    aria-label="copy"
+  >
+    <mat-icon>content_copy</mat-icon>
+  </button>
+  <span>Click to copy</span>
+  

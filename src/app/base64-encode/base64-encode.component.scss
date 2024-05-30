@@ -1,0 +1,12 @@
+.form{
+    display: flex;
+    margin:3rem;
+}
+mat-form-field{
+    min-width: 500px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
