@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { JsonSheetConvertComponent } from './json-sheet-convert/json-sheet-convert.component';
 import { NgJsonEditorModule } from 'ang-jsoneditor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgJsonEditorModule, FormsModule, ReactiveFormsModule, BrowserModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
